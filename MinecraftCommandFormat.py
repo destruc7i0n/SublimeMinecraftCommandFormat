@@ -2,7 +2,9 @@ import sublime
 import sublime_plugin
 
 class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
-	"""This code is almost entirely by @Texelelf, all credit goes to him."""
+
+	"""docstring for MinecraftFormatBaseCommand"""
+
 	def indent(ct):
 		return "".join(["\t" for i in xrange(ct)])
 
@@ -19,16 +21,16 @@ class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
 					line += command[c]
 				else:
 					if line:
-						coms.append(indent(i)+line+"\n")
+						coms.append(self.indent(i)+line+"\n")
 						line = ""
-					coms.append(indent(i)+"{\n")
+					coms.append(self.indent(i)+"{\n")
 					i += 1
 			elif command[c] == "}":
 				if inquote:
 					line += command[c]
 				else:
 					if line:
-						coms.append(indent(i)+line+"\n")
+						coms.append(self.indent(i)+line+"\n")
 						line = ""
 					i -= 1
 					line += command[c]
@@ -37,16 +39,16 @@ class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
 					line += command[c]
 				else:
 					if line:
-						coms.append(indent(i)+line+"\n")
+						coms.append(self.indent(i)+line+"\n")
 						line = ""
-					coms.append(indent(i)+"[\n")
+					coms.append(self.indent(i)+"[\n")
 					i += 1
 			elif command[c] == "]":
 				if inquote:
 					line += command[c]
 				else:
 					if line:
-						coms.append(indent(i)+line+"\n")
+						coms.append(self.indent(i)+line+"\n")
 						line = ""
 					i -= 1
 					line += command[c]
@@ -58,18 +60,22 @@ class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
 				if inquote:
 					line += command[c]
 				else:
-					coms.append(indent(i)+line+",\n")
+					coms.append(self.indent(i)+line+",\n")
 					line = ""
 			else:
 				line += command[c]
 		else:
 			if line:
-				coms.append(indent(i)+line+"\n")
+				coms.append(self.indent(i)+line+"\n")
 		return coms
+		
 
 class MinecraftFormatCommand(MinecraftFormatBaseCommand):
+	
 	""" Pretty Print a Minecraft Command """
+
 	def run(self, edit):
+		outputlines = []
 		for region in self.view.sel():
 
 			# If no selection, use the entire file as the selection
@@ -78,11 +84,13 @@ class MinecraftFormatCommand(MinecraftFormatBaseCommand):
 			else:
 				selection = region
 
-			if "{" in selection:
-				mdatapos = selection.find("{")
-				outputlines.append(selection[:mdatapos]+"\n")
-				outputlines+=strexplode(selection[mdatapos:])
+			fs = self.view.substr(selection)
+
+			if "{" in fs:
+				mdatapos = fs.find("{")
+				outputlines.append(fs[:mdatapos]+"\n")
+				outputlines+=self.strexplode(fs[mdatapos:])
 			else:
-				outputlines.append(str(selection)+"\n")			
+				outputlines.append(str(fs)+"\n")			
 #			obj = self.strexplode(self.view.substr(selection))
 			self.view.replace(edit, selection, ("".join(outputlines)))
