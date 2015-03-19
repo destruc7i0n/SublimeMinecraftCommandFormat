@@ -1,6 +1,10 @@
 [
     {
-        "caption": "Minecraft Format: Format Minecraft Command",
+        "caption": "Minecraft Format: Format (Pretty Print) Minecraft Command",
         "command": "minecraft_format"
+    },
+    {
+    	"caption": "Minecraft Format: Minify (compress) Minecraft Command",
+    	"command": "minecraft_un_format"
     }
 ]
