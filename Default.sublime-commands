@@ -1,6 +1,6 @@
 [
     {
         "caption": "Minecraft Format: Format Minecraft Command",
-        "command": "MinecraftFormat"
+        "command": "minecraft_format"
     }
 ]
