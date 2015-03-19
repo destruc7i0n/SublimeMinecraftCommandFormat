@@ -1,12 +1,8 @@
 [
     {
         "keys": [
-            "ctrl+alt+j"
+            "ctrl+alt+m"
         ], 
-        "command": "pretty_json"
-    },
-    {
-        "keys": ["ctrl+alt+shift+j"],
-        "command": "jq_pretty_json"
+        "command": "mc_format"
     }
 ]
