@@ -79,4 +79,4 @@ class MinecraftFormatCommand(MinecraftFormatBaseCommand):
 				selection = region
 
 			obj = self.strexplode(self.view.substr(selection))
-			self.view.replace(edit, selection, self.json_dumps(obj))
+			self.view.replace(edit, selection, obj)
