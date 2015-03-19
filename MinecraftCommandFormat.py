@@ -78,5 +78,11 @@ class MinecraftFormatCommand(MinecraftFormatBaseCommand):
 			else:
 				selection = region
 
-			obj = self.strexplode(self.view.substr(selection))
-			self.view.replace(edit, selection, obj)
+			if "{" in selection:
+				mdatapos = selection.find("{")
+				outputlines.append(selection[:mdatapos]+"\n")
+				outputlines+=strexplode(selection[mdatapos:])
+			else:
+				outputlines.append(str(selection)+"\n")			
+#			obj = self.strexplode(self.view.substr(selection))
+			self.view.replace(edit, selection, ("".join(outputlines)))
