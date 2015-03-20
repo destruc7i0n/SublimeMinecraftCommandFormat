@@ -82,11 +82,11 @@ class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
 				continue
 			if comfound:
 				comfound = False
-				command += l.lstrip().rstrip() + " "
+				command += l.lstrip().replace("\r\n","").replace("\n","") #+ " "
 			else:
-				command += l.lstrip().rstrip()
+				command += l.lstrip().replace("\r\n","").replace("\n","")
 		else:
-			commands.append((id,command.decode("unicode-escape")))
+			commands.append((id,command.encode("utf-8", "ignore").decode("unicode-escape","ignore").replace(u"\u00C2","")))
 		
 			
 		return commands
