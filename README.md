@@ -16,4 +16,4 @@ Using Command Palette <kbd>Ctrl+Shift+P</kbd> find "Minecraft Format: Minify (co
 
 ## Thanks
 
-- @yrsegal https://github.com/yrsegal or https://twitter.com/yrsegal
+- @yrsegal https://github.com/yrsegal or https://twitter.com/wiresegal
