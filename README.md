@@ -8,7 +8,7 @@ A Sublime Text Plugin to Format Minecraft Commands
 
 ##### If you do not have git
 - Download [me](https://github.com/destruc7i0n/SublimeMinecraftCommandFormat/archive/master.zip) and extract.
-- Place the folder inside that one into `<Packages directory>`. (Find the `Browse Packages...` menu item in Sublime Text 2 to get into Packages folder!)
+- Place the folder inside that one into `<Packages directory>`. (At the `Preferences > Browse Packages...` menu item in Sublime Text 2 to get into Packages folder!)
 
 ## Usage
 
