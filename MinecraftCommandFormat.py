@@ -1,3 +1,13 @@
+"""
+Minecraft Command Formatter for Sublime Text
+
+Simply select the command you want to format and run this plugin
+
+Feel free to use and edit, just give credit to TheDestruc7i0n and @Texelelf.
+http://thedestruc7i0n.ca
+https://twitter.com/TexelElf
+"""
+
 import sublime
 import sublime_plugin
 
@@ -114,7 +124,7 @@ class MinecraftFormatCommand(MinecraftFormatBaseCommand):
 			else:
 				outputlines.append(str(fs)+"\n")
 			outputlines.append("\n")		
-#			obj = self.strexplode(self.view.substr(selection))
+
 			self.view.replace(edit, selection, ("".join(outputlines)))
 
 class MinecraftUnFormatCommand(MinecraftFormatBaseCommand):
