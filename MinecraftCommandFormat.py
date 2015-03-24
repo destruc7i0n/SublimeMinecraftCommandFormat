@@ -131,8 +131,7 @@ class MinecraftUnFormatCommand(MinecraftFormatBaseCommand):
 				selection = region
 
 			fs = self.view.substr(selection).splitlines(True)
-			print fs
 
 			output = self.strcollapse(fs)[0][1]
-			print output
+			
 			self.view.replace(edit, selection, output)
