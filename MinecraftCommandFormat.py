@@ -8,8 +8,7 @@ http://thedestruc7i0n.ca
 https://twitter.com/TexelElf
 """
 
-import sublime
-import sublime_plugin
+import sublime, sublime_plugin
 
 class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
 
@@ -81,25 +80,21 @@ class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
 
 
 	def strcollapse(self, lines):
-		commands = []
 		command = ""
-		id = ""
-		comfound = True
+		if len(lines) == 1:
+			return lines[0]
+
+		if lines[0] == "{":
+			command += lines[0].lstrip().replace("\r\n","").replace("\n","")
+		else:
+			command += lines[0].lstrip().replace("\r\n","").replace("\n","")
 		for l in lines:
 			if not l:
 				continue
-			if l[0] == ";":
+			if lines.index(l) == 0:
 				continue
-			if comfound:
-				comfound = False
-				command += l.lstrip().replace("\r\n","").replace("\n","") #+ " "
-			else:
-				command += l.lstrip().replace("\r\n","").replace("\n","")
-		else:
-			commands.append((id,command.encode("utf-8", "ignore").decode("unicode-escape","ignore").replace(u"\u00C2","")))
-		
-			
-		return commands
+			command += l.lstrip().replace("\r\n","").replace("\n","")
+		return command
 				
 class MinecraftFormatCommand(MinecraftFormatBaseCommand):
 	
@@ -142,6 +137,6 @@ class MinecraftUnFormatCommand(MinecraftFormatBaseCommand):
 
 			fs = self.view.substr(selection).splitlines(True)
 
-			output = self.strcollapse(fs)[0][1]
-			
+			output = self.strcollapse(fs)
+
 			self.view.replace(edit, selection, output)
