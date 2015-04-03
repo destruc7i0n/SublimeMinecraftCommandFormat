@@ -3,7 +3,9 @@ A Sublime Text Plugin to Format Minecraft Commands
 
 ## Installation
 
-Install this sublime text 2/3 package via [Package Control](https://sublime.wbond.net) search for package: "**SublimeMinecraftCommandFormat**" (How-To here: https://packagecontrol.io/installation , message me if needed more info)
+Install this sublime text 2/3 package via [Package Control](https://sublime.wbond.net) search for package: "**SublimeMinecraftCommandFormat**" 
+
+<sup>(How-To here: https://packagecontrol.io/installation , message me if needed more info)</sup>
 
 ### or manually install
 
