@@ -7,7 +7,7 @@ Install this sublime text 2/3 package via [Package Control](https://sublime.wbon
 
 <sup>(How-To here: https://packagecontrol.io/installation , message me if needed more info)</sup>
 
-### or manually install
+#### or manually install
 
 - `cd <Packages directory>`
 - `git clone https://github.com/destruc7i0n/SublimeMinecraftCommandFormat.git`
