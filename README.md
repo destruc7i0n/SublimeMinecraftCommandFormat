@@ -10,7 +10,7 @@ Install this sublime text 2/3 package via [Package Control](https://sublime.wbon
 - `cd <Packages directory>`
 - `git clone https://github.com/destruc7i0n/SublimeMinecraftCommandFormat.git`
 
-##### If you do not have git
+##### If you do not have git or Package Control
 - Download [me](https://github.com/destruc7i0n/SublimeMinecraftCommandFormat/archive/master.zip) and extract.
 - Place the folder inside that one into `<Packages directory>`. (At the `Preferences > Browse Packages...` menu item in Sublime Text 2 to get into Packages folder!)
 
