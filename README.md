@@ -27,3 +27,7 @@ Using Command Palette <kbd>Ctrl+Shift+P</kbd> find "Minecraft Format: Minify (co
 ## Thanks
 
 - @yrsegal https://github.com/yrsegal or https://twitter.com/wiresegal
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/destruc7i0n/sublimeminecraftcommandformat/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
