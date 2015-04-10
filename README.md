@@ -31,3 +31,6 @@ Using Command Palette <kbd>Ctrl+Shift+P</kbd> find "Minecraft Format: Minify (co
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/destruc7i0n/sublimeminecraftcommandformat/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/destruc7i0n/)
+
+
