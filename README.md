@@ -3,7 +3,7 @@ A Sublime Text Plugin to Format Minecraft Commands
 
 ## Installation
 
-Install this sublime text 2/3 package via [Package Control](https://sublime.wbond.net) search for package: "**SublimeMinecraftCommandFormat**" 
+Install this sublime text 2 package via [Package Control](https://sublime.wbond.net) search for package: "**SublimeMinecraftCommandFormat**" 
 
 <sup>(How-To here: https://packagecontrol.io/installation , message me if needed more info)</sup>
 
@@ -27,10 +27,5 @@ Using Command Palette <kbd>Ctrl+Shift+P</kbd> find "Minecraft Format: Minify (co
 ## Thanks
 
 - @yrsegal https://github.com/yrsegal or https://twitter.com/wiresegal
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/destruc7i0n/sublimeminecraftcommandformat/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/destruc7i0n/)
 
 
