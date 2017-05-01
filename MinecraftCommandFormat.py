@@ -15,7 +15,7 @@ class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
 	""" Base code | Majority is from @TexelElf """
 
 	def indent(self, ct):
-		return "".join(["\t" for i in xrange(ct)])
+		return "".join(["\t" for i in range(ct)])
 
 	def strexplode(self, command):
 		coms = []
@@ -24,7 +24,7 @@ class MinecraftFormatBaseCommand(sublime_plugin.TextCommand):
 		i = 0
 		line = ""
 		inquote = 0
-		for c in xrange(len(command)):
+		for c in range(len(command)):
 			if command[c] == "{":
 				if inquote:
 					line += command[c]
